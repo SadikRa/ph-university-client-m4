@@ -1,11 +1,5 @@
-import React from 'react';
-
 const CreateFaculty = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div></div>;
 };
 
 export default CreateFaculty;
