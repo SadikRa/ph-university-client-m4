@@ -1,36 +1,7 @@
-import { Layout, Menu, MenuProps } from "antd";
+import { Layout, Menu } from "antd";
 
-import { NavLink } from "react-router-dom";
+import { adminSidebarItems } from "../../routes/admin.routes";
 const { Header, Content, Footer, Sider } = Layout;
-
-const items: MenuProps["items"] = [
-  {
-    key: "Dashboard",
-    label: <NavLink to={"admin/dashboard"}>DashBoard</NavLink>,
-  },
-  {
-    key: "2",
-    label: "Profile",
-  },
-  {
-    key: "User Management",
-    label: "User Management",
-    children: [
-      {
-        key: "create Faculty",
-        label: <NavLink to={"admin/create-faculty"}>Create Faculty</NavLink>,
-      },
-      {
-        key: "Create Admin",
-        label: <NavLink to={"admin/create-admin"}>Create admin</NavLink>,
-      },
-      {
-        key: "create-student",
-        label: <NavLink to={"admin/create-student"}>Create Student</NavLink>,
-      },
-    ],
-  },
-];
 
 const MainLayout = () => {
   return (
@@ -60,7 +31,7 @@ const MainLayout = () => {
           theme="dark"
           mode="inline"
           defaultSelectedKeys={["4"]}
-          items={items}
+          items={adminSidebarItems}
         />
       </Sider>
       <Layout>
