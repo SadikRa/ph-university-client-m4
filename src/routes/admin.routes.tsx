@@ -67,6 +67,7 @@ export const adminSidebarItems = adminPaths.reduce(
           label: <NavLink to={`/admin/${child.path}`}>{child.name}</NavLink>,
         })),
       });
+      
     }
 
     return acc;
