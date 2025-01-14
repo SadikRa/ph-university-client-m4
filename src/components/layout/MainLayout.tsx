@@ -1,6 +1,7 @@
 import { Layout, Menu } from "antd";
+import { sidebarItemsGenerator } from "../../utils/sidebarItemsGenerator";
+import { adminPaths } from "../../routes/admin.routes";
 
-import { adminSidebarItems } from "../../routes/admin.routes";
 const { Header, Content, Footer, Sider } = Layout;
 
 const MainLayout = () => {
@@ -31,7 +32,7 @@ const MainLayout = () => {
           theme="dark"
           mode="inline"
           defaultSelectedKeys={["4"]}
-          items={adminSidebarItems}
+          items={sidebarItemsGenerator(adminPaths, "admin")}
         />
       </Sider>
       <Layout>
