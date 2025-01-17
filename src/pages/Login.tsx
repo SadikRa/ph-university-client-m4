@@ -20,7 +20,7 @@ const Login = () => {
   // });
 
   const defaultValues = {
-    userId: 'A-0002',
+    userId: 'A-0001',
     password: 'admin123',
   };
 
@@ -40,6 +40,7 @@ const Login = () => {
       dispatch(setUser({ user: user, token: res.data.accessToken }));
       toast.success('Logged in', { id: toastId, duration: 2000 });
       navigate(`/${user.role}/dashboard`);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       toast.error('Something went wrong', { id: toastId, duration: 2000 });
     }
