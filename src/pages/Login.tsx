@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Button, Row } from 'antd';
 import { FieldValues } from 'react-hook-form';
 import { useLoginMutation } from '../redux/features/auth/authApi';

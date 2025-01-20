@@ -1,18 +1,19 @@
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 import {
   useAddMarkMutation,
   useGetAllFacultyCoursesQuery,
-} from "../../redux/features/faculty/facultyCourses.api";
-import { Button, Modal, Table, TableColumnsType } from "antd";
-import { useState } from "react";
-import PHForm from "../../components/form/PHForm";
-import PHInput from "../../components/form/PHInput";
+} from '../../redux/features/faculty/facultyCourses.api';
+import { Button, Modal, Table, TableColumnsType } from 'antd';
+import { useState } from 'react';
+import PHForm from '../../components/form/PHForm';
+import PHSelect from '../../components/form/PHSelect';
+import PHInput from '../../components/form/PHInput';
 
 const MyStudents = () => {
   const { registerSemesterId, courseId } = useParams();
   const { data: facultyCoursesData } = useGetAllFacultyCoursesQuery([
-    { name: "semesterRegistration", value: registerSemesterId },
-    { name: "course", value: courseId },
+    { name: 'semesterRegistration', value: registerSemesterId },
+    { name: 'course', value: courseId },
   ]);
 
   console.log(facultyCoursesData);
@@ -30,18 +31,18 @@ const MyStudents = () => {
 
   const columns = [
     {
-      title: "Name",
-      key: "name",
-      dataIndex: "name",
+      title: 'Name',
+      key: 'name',
+      dataIndex: 'name',
     },
     {
-      title: "Roll",
-      key: "roll",
-      dataIndex: "roll",
+      title: 'Roll',
+      key: 'roll',
+      dataIndex: 'roll',
     },
     {
-      title: "Action",
-      key: "x",
+      title: 'Action',
+      key: 'x',
       render: (item) => {
         return (
           <div>
